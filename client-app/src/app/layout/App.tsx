@@ -22,6 +22,7 @@ const App = () => {
     setEditMode(true);
   };
 
+  
   useEffect(() => {
     axios
       .get<IActivity[]>('http://localhost:5000/api/activities')

@@ -1,5 +1,9 @@
-# Reactivities
-DotNet Core WebApi / React
+# DotNet Core WebApi / React
 
-## MediatR
-## CQRS + MediatR Pattern
+#### MediatR library
+#### CQRS - Query/Command + MediatR Pattern
+
+#### React Hooks 
+#### Forms in React 
+#### Semantic UI React
+#### Guid -> uuid library

@@ -7,7 +7,7 @@
 #### Forms in React 
 #### Semantic UI React
 #### Guid -> uuid library
-### Axios -> http library 
-#### Http errors
-#### Interceptors
+#### Axios -> http library 
+#### Mobx -> state management system
+
 

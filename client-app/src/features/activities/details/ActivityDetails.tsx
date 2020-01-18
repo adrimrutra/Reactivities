@@ -1,42 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Image, Button } from 'semantic-ui-react';
-import { IActivity } from '../../../app/models/activity';
+import ActivityStore from '../../../app/stores/activityStore';
+import { observer } from 'mobx-react-lite';
 
-interface IProps {
-  activitie: IActivity;
-  setEditMode: (editMode: boolean) => void;
-  setSelectedActivitie: (activitie: IActivity | null) => void;
-}
-
-const ActivityDetails: React.FC<IProps> = ({
-  activitie,
-  setEditMode,
-  setSelectedActivitie
-}) => {
+const ActivityDetails: React.FC = () => {
+  const activityStore = useContext(ActivityStore);
+  const {
+    selectedActivity: activitie,
+    openEditForm,
+    cancelSelectedActivity
+  } = activityStore;
   return (
     <Card fluid>
       <Image
-        src={`/assets/categoryImages/${activitie.category}.jpg`}
+        src={`/assets/categoryImages/${activitie!.category}.jpg`}
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>{activitie.title}</Card.Header>
+        <Card.Header>{activitie!.title}</Card.Header>
         <Card.Meta>
-          <span>{activitie.date}</span>
+          <span>{activitie!.date}</span>
         </Card.Meta>
-        <Card.Description>{activitie.description}</Card.Description>
+        <Card.Description>{activitie!.description}</Card.Description>
       </Card.Content>
       <Card.Content extra>
         <Button.Group widths={2}>
           <Button
-            onClick={() => setEditMode(true)}
+            onClick={() => openEditForm(activitie!.id)}
             basic
             color="blue"
             content="Edit"
           />
           <Button
-            onClick={() => setSelectedActivitie(null)}
+            onClick={cancelSelectedActivity}
             basic
             color="grey"
             content="Cancel"
@@ -47,4 +44,4 @@ const ActivityDetails: React.FC<IProps> = ({
   );
 };
 
-export default ActivityDetails;
+export default observer(ActivityDetails);

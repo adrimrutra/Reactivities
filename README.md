@@ -4,7 +4,7 @@
 #### CQRS - Query/Command + MediatR Pattern
 #### Fluent Validation
 #### Error Handling middleware
-
+####
 #### React Hooks 
 #### Forms in React 
 #### Semantic UI React
@@ -14,5 +14,8 @@
 #### Mobx -> state management system
 #### React Router
 #### React-Toastify
+#### React Final Form 
+#### React-Widgets 
+#### Revalidate
 
 

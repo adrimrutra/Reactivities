@@ -4,7 +4,8 @@
 #### CQRS - Query/Command + MediatR Pattern
 #### Fluent Validation
 #### Error Handling middleware
-####
+#### ASPNET Core Identity
+#### Jwt Token
 #### React Hooks 
 #### Forms in React 
 #### Semantic UI React

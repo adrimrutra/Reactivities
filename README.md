@@ -1,4 +1,4 @@
-# DotNet Core WebApi / React
+## DotNet Core WebApi / React
 
 #### MediatR library
 #### CQRS - Query/Command + MediatR Pattern
@@ -12,7 +12,7 @@
 #### Guid -> uuid library
 #### Axios -> http library 
 #### Axios Interceptor
-#### Mobx -> state management system
+#### MobX -> state management system
 #### React Router
 #### React-Toastify
 #### React Final Form 

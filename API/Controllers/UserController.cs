@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Application.User;
+using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,7 @@ namespace API.Controllers
         {
             return await Mediator.Send(query);
         }
+
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(Register.Command command)

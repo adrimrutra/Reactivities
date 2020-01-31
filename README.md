@@ -18,5 +18,8 @@
 #### React Final Form 
 #### React-Widgets 
 #### Revalidate
+#### Upload Widget
+#### React Dropzone
+#### React cropper
 
 

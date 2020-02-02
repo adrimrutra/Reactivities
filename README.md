@@ -5,6 +5,7 @@
 #### Fluent Validation
 #### Error Handling middleware
 #### ASPNET Core Identity
+#### SegnalR
 #### Jwt Token
 #### React Hooks 
 #### Forms in React 
@@ -21,5 +22,6 @@
 #### Upload Widget
 #### React Dropzone
 #### React cropper
+#### formatDistance
 
 

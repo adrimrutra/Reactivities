@@ -24,5 +24,6 @@
 #### React cropper
 #### formatDistance
 #### react-infinite-scroller 
+#### react-facebook-login
 
 

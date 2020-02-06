@@ -41,20 +41,29 @@ namespace API
 
         public void ConfigureDevelopmentServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(opt =>
-            {
-                opt.UseLazyLoadingProxies();
-                opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+            // services.AddDbContext<DataContext>(opt =>
+            // {
+            //     opt.UseLazyLoadingProxies();
+            //     opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+            // });
+
+            services.AddDbContext<DataContext>(x => {
+                x.UseLazyLoadingProxies();
+                x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             ConfigureServices(services);
         }
 
         public void ConfigureProductionServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(opt =>
-            {
-                opt.UseLazyLoadingProxies();
-                opt.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+            // services.AddDbContext<DataContext>(opt =>
+            // {
+            //     opt.UseLazyLoadingProxies();
+            //     opt.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+            // });
+            services.AddDbContext<DataContext>(x => {
+                x.UseLazyLoadingProxies();
+                x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             ConfigureServices(services);
         }
@@ -110,10 +119,9 @@ namespace API
             services.AddScoped<IUserAccessor, UserAccessor>();
             services.AddScoped<IPhotoAccessor, PhotoAccessor>();
             services.AddScoped<IProfileReader, ProfileReader>();
-
-
-
+            services.AddScoped<IFacebookAccessor, FacebookAccessor>();
             services.Configure<CloudinarySettings>(Configuration.GetSection("Claudinary"));
+            services.Configure<FacebookAppSettings>(Configuration.GetSection("Authentication:Facebook"));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["TokenKey"]));
 

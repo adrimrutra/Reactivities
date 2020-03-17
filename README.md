@@ -1,5 +1,9 @@
 ## DotNet Core WebApi / React
 
+### https://reactivitiesapp.azurewebsites.net/
+
+
+
 #### MediatR library
 #### CQRS - Query/Command + MediatR Pattern
 #### Fluent Validation
@@ -7,6 +11,7 @@
 #### ASPNET Core Identity
 #### SegnalR
 #### Jwt Token
+#### MsSql Server
 #### React Hooks 
 #### Forms in React 
 #### Semantic UI React

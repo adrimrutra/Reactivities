@@ -41,12 +41,6 @@ namespace API
 
         public void ConfigureDevelopmentServices(IServiceCollection services)
         {
-            // services.AddDbContext<DataContext>(opt =>
-            // {
-            //     opt.UseLazyLoadingProxies();
-            //     opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
-            // });
-
             services.AddDbContext<DataContext>(x => {
                 x.UseLazyLoadingProxies();
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -56,11 +50,6 @@ namespace API
 
         public void ConfigureProductionServices(IServiceCollection services)
         {
-            // services.AddDbContext<DataContext>(opt =>
-            // {
-            //     opt.UseLazyLoadingProxies();
-            //     opt.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
-            // });
             services.AddDbContext<DataContext>(x => {
                 x.UseLazyLoadingProxies();
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
